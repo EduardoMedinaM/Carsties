@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\localrepos\\Carsties\\src\\AuctionsService\\AuctionsService.csproj": {}
+    "C:\\localrepos\\Carsties\\src\\AuctionsService\\AuctionsService.csproj": {}
   },
   "projects": {
-    "c:\\localrepos\\Carsties\\src\\AuctionsService\\AuctionsService.csproj": {
+    "C:\\localrepos\\Carsties\\src\\AuctionsService\\AuctionsService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\localrepos\\Carsties\\src\\AuctionsService\\AuctionsService.csproj",
+        "projectUniqueName": "C:\\localrepos\\Carsties\\src\\AuctionsService\\AuctionsService.csproj",
         "projectName": "AuctionsService",
-        "projectPath": "c:\\localrepos\\Carsties\\src\\AuctionsService\\AuctionsService.csproj",
+        "projectPath": "C:\\localrepos\\Carsties\\src\\AuctionsService\\AuctionsService.csproj",
         "packagesPath": "C:\\Users\\EduardoMedina\\.nuget\\packages\\",
-        "outputPath": "c:\\localrepos\\Carsties\\src\\AuctionsService\\obj\\",
+        "outputPath": "C:\\localrepos\\Carsties\\src\\AuctionsService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\EduardoMedina\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -75,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

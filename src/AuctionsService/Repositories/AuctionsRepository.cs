@@ -16,10 +16,15 @@ public class AuctionsRepository : IAuctionsRepository
         _mapper = mapper;
     }
     public async Task<IEnumerable<AuctionDto>> GetAllAuctionsAsync() =>
-        _mapper.Map<IEnumerable<AuctionDto>>(
-            await _auctionDbContext
+        _mapper.Map<List<AuctionDto>>(await _auctionDbContext
                     .Auctions
                     .Include(x => x.Item)
                     .OrderBy(x => x.Item.Make)
                     .ToListAsync());
+    public async Task<AuctionDto> GetAuctionByIdAsync(Guid id) =>
+        _mapper.Map<AuctionDto>(
+            await _auctionDbContext
+            .Auctions
+            .Include(x => x.Item)
+            .FirstOrDefaultAsync(x => x.Id == id));
 }
