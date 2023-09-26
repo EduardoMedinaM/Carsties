@@ -1,5 +1,6 @@
 ﻿using AuctionsService.Data;
 using AuctionsService.DTOs;
+using AuctionsService.Entities;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 
@@ -27,4 +28,21 @@ public class AuctionsRepository : IAuctionsRepository
             .Auctions
             .Include(x => x.Item)
             .FirstOrDefaultAsync(x => x.Id == id));
+
+    public async Task<AuctionDto> CreateAuctionAsync(CreateAuctionDto createAuctionDto)
+    {
+        var auction = _mapper.Map<Auction>(createAuctionDto);
+
+        // TODO: add current user as seller
+        auction.Seller = "test";
+
+        // Added to memory and track the 'Auction' entity
+        await _auctionDbContext.Auctions.AddAsync(auction);
+
+        var operations = await _auctionDbContext.SaveChangesAsync() > 0;
+        if(!operations) return null;
+
+        return _mapper.Map<AuctionDto>(auction);
+    }
+            
 }

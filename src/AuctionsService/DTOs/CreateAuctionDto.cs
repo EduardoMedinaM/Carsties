@@ -2,13 +2,14 @@
 
 namespace AuctionsService.DTOs;
 
-public record CreateAuctionDto(
-    [Required] string Make,
-    [Required] string Model,
-    [Required] int Year,
-    [Required] string Color,
-    [Required] int Mileage,
-    [Required] string ImageUrl,
-    [Required] int ReservePrice,
-    [Required] DateTime AuctionEnd
-);
+public class CreateAuctionDto
+{
+    [Required] public string Make { set; get; }
+    [Required] public string Model { set; get; }
+    [Required] public int Year { set; get; }
+    [Required] public string Color { set; get; }
+    [Required] public int Mileage { set; get; }
+    [Required] public string ImageUrl { set; get; }
+    [Required] public int ReservePrice { set; get; }
+    [Required] public DateTime AuctionEnd { set; get; }
+};
